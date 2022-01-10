@@ -170,7 +170,8 @@ public class BinaryTreeLL {
 		queue.add(root);
 		while(!queue.isEmpty()) {
 			BinaryNode presentNode = queue.remove();
-			if(presentNode.value==value) {
+			System.out.println("presentNode.value : " +presentNode.value);
+			if(presentNode.value == value) {
 				presentNode.value = getDeepestNode().value;
 				deleteDeepestNode();
 				System.out.println("The node is Deleted !!");

@@ -38,7 +38,7 @@ https://leetcode.com/problems/binary-tree-postorder-traversal/submissions/
       }
   }
 
-public class PostOrderLB {
+public class PostOrderLBRecursive {
 
     List<Integer> list = new ArrayList<Integer>();
 

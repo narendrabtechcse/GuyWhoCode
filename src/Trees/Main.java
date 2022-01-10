@@ -84,10 +84,31 @@ public class Main {
         System.out.println("Level Order Traversal of the tree is : ");
         binaryTree.levelOrder(binaryTree.root);
 
+        System.out.println();
+
+        System.out.println("Deepest Node of the tree is : "+binaryTree.getDeepestNode(binaryTree.root).value);
 
 
+        System.out.println("Level Order Traversal of the tree before deleting the deepest node is : ");
+        binaryTree.levelOrder(binaryTree.root);
+        binaryTree.deleteDeepestNode(binaryTree.root);
+        System.out.println();
+        System.out.println("Level Order Traversal of the tree after deleting the deepest node is : ");
+        binaryTree.levelOrder(binaryTree.root);
 
 
+        System.out.println();
+        System.out.println("Level Order Traversal of the tree before deleting the N6 node is : ");
+        binaryTree.levelOrder(binaryTree.root);
+        binaryTree.deleteNode("N6");
+        System.out.println();
+        System.out.println("Level Order Traversal of the tree after deleting the N6 node is : ");
+        binaryTree.levelOrder(binaryTree.root);
+
+
+        System.out.println();
+        System.out.println("ZigZag Traversal of the tree after deleting the N6 node is : ");
+        System.out.println(binaryTree.zigzagLevelOrder(binaryTree.root));
 
     }
 }
