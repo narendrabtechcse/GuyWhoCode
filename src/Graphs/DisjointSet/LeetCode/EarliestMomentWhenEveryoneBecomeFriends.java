@@ -45,7 +45,8 @@ public class EarliestMomentWhenEveryoneBecomeFriends {
             rank[i] = 1;
         }
 
-        Arrays.sort(logs, (a, b) -> Integer.compare(a[0], b[0]));
+        //remove this comment in next line
+        //Arrays.sort(logs, (a, b) -> Integer.compare(a[0], b[0]));
 
         for(int[] log: logs){
             union(log[1], log[2]);
