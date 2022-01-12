@@ -31,48 +31,30 @@ import java.util.Set;
 
 public class EarliestMomentWhenEveryoneBecomeFriends {
 
-
     int[] root;
     int[] rank;
     static int count;
 
     public int earliestAcq(int[][] logs, int n) {
-
         count = n;
         root = new int[n];
         rank = new int[n];
-        int globalMinTime = -1;
+
         for (int i = 0; i < n; i++) {
             root[i] = i;
             rank[i] = 1;
         }
 
-        //uncomment this line for working solutions
+        Arrays.sort(logs, (a, b) -> Integer.compare(a[0], b[0]));
 
-        //Arrays.sort(logs, (a, b) -> Integer.compare(a[0], b[0]));
-
-
-        for(int[] edge: logs){
-            int minTime = edge[0];
-            union(edge[1], edge[2]);
-            globalMinTime = Math.max(globalMinTime,minTime);
-            if(count==1)
-                break;
-        }
-
-        if(count==1){
-            Set set = new HashSet();
-            for (int i = 0; i < n; i++) {
-                set.add(find(i));
+        for(int[] log: logs){
+            union(log[1], log[2]);
+            if(count==1){
+                return log[0];
             }
-            if(set.size()==1)
-                return globalMinTime;
-            else
-                return -1;
-        }else
-            return -1;
+        }
+        return -1;
     }
-
 
     public int find(int x) {
         if (x == root[x]) {
@@ -95,10 +77,6 @@ public class EarliestMomentWhenEveryoneBecomeFriends {
             }
             count--;
         }
-    }
-
-    public boolean isConnected(int x, int y) {
-        return find(x) == find(y);
     }
 
 }
