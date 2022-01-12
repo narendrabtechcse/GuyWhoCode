@@ -19,6 +19,11 @@ public class NumberOfProvinces {
     private int[] rank;
 
     public int findCircleNum(int[][] isConnected) {
+
+        if (isConnected == null || isConnected.length == 0) {
+            return 0;
+        }
+
         root = new int[isConnected[0].length];
         rank = new int[isConnected[0].length];
 
