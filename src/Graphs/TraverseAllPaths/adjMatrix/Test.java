@@ -1,4 +1,4 @@
-package Graphs.adjList;
+package Graphs.TraverseAllPaths.adjMatrix;
 
 
 import java.util.ArrayList;
@@ -27,7 +27,7 @@ public class Test {
         nodes.add(F);
         nodes.add(G);
 
-        GraphList graphList = new GraphList(nodes);
+        TraverseAllPaths graphList = new TraverseAllPaths(nodes);
 
         graphList.addUndirectedEdge(0,1);
         graphList.addUndirectedEdge(1,2);
@@ -44,9 +44,9 @@ public class Test {
 
         //graphList.bfsTraversal(0);
 
-       // graphList.DFS();
+        graphList.DFS();
 
-        graphList.bfsTraversal(A);
+        //graphList.bfsTraversal(A);
 
 
     }
