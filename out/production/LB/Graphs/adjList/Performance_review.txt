@@ -1,0 +1,8 @@
+Done with many tools(like perfecto coddles etc) pre-study to decide which one we should go with automation and finally decided to go with selenium as many old tools and codes can still be reused from Vadin framework test cases. Also we have achieved a good amount of automation in Carbon UI , we have separated the UI and API automation this time .
+Narendra Agrawal
+Me14d
+Used Jmeter and created some tools in nodejs for performance
+testing.
+Narendra Agrawal
+Me14d
+Using Karate for API Testing .
