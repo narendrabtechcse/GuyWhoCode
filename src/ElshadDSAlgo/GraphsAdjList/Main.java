@@ -28,7 +28,8 @@ public class Main {
 
 		
 		System.out.println(g.toString());
-		
+
+		g.dfs();
 	}
 
 }
