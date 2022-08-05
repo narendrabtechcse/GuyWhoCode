@@ -3,9 +3,11 @@ package StandardJavaInterviewWriteCodeQuestions;
 import java.util.LinkedList;
 import java.util.List;
 
-public class ProducerConsumerExample {public static void main(String[] args)
-        throws InterruptedException
-{
+public class ProducerConsumerExample {
+
+
+    public static void main(String[] args) throws InterruptedException
+    {
     // Object of a class that has both produce()
     // and consume() methods
     final PC pc = new PC();

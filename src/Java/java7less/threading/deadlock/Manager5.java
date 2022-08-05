@@ -1,5 +1,8 @@
 package Java.java7less.threading.deadlock;
 
+import java.lang.management.ManagementFactory;
+import java.lang.management.ThreadMXBean;
+
 public class Manager5 {
 
     public static void main(String[] args) {
@@ -11,5 +14,24 @@ public class Manager5 {
 
         a1.start();
         b1.start();
+
+
+        Util.sleep(10000);
+
+        ThreadMXBean threadMXBean = ManagementFactory.getThreadMXBean();
+
+        long[] ids = threadMXBean.findDeadlockedThreads();
+
+        if(ids!=null)
+        {
+            System.out.println("Threads are under deadlock !!");
+
+            for (long id : ids)
+            {
+                System.out.println(id);
+            }
+        }else{
+            System.out.println("No threads are under deadlock !!");
+        }
     }
 }
