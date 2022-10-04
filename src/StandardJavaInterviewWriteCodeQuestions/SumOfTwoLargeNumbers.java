@@ -29,6 +29,7 @@ public class SumOfTwoLargeNumbers {
             // current digits and carry
             int sum = ((int)(str1.charAt(i)-'0') +
                     (int)(str2.charAt(i+diff)-'0') + carry);
+
             str += (char)(sum % 10 + '0');
             carry = sum / 10;
         }

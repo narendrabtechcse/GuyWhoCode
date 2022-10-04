@@ -1,3 +1,5 @@
+package javamultithreadingandconcurrencysimplifiedudemy.DeadlockDemo.src;
+
 class Writer1 extends Thread {
 	
 	Object book;
@@ -44,7 +46,7 @@ class Writer2 extends Thread {
 	}
 }
 
-public class Main {
+class Main102 {
 
 	public static void main(String[] args) {
 		

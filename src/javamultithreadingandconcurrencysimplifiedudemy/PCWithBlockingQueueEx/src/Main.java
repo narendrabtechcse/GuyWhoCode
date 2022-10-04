@@ -1,3 +1,5 @@
+package javamultithreadingandconcurrencysimplifiedudemy.PCWithBlockingQueueEx.src;
+
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
@@ -5,10 +7,10 @@ import java.util.concurrent.BlockingQueue;
 //    producer --> messageQueue --> consumer.
 
 
-class ProducerThread extends Thread {
+class ProducerThread12 extends Thread {
 	BlockingQueue<String> queue;
 	
-	public ProducerThread(BlockingQueue<String> queue) {
+	public ProducerThread12(BlockingQueue<String> queue) {
 		this.queue = queue;
 	}
 	
@@ -54,7 +56,7 @@ public class Main {
 
 	public static void main(String[] args) throws InterruptedException {
 		BlockingQueue<String> queue = new ArrayBlockingQueue<String>(3);
-		new ProducerThread(queue).start();
+		new ProducerThread12(queue).start();
 		new ConsumerThread(queue).start();
 	}
 

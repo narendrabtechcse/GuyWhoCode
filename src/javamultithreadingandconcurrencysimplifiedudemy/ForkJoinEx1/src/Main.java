@@ -1,13 +1,15 @@
+package javamultithreadingandconcurrencysimplifiedudemy.ForkJoinEx1.src;
+
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveTask;
 
-class SearchTask extends RecursiveTask<Integer> {
+class SearchTask123 extends RecursiveTask<Integer> {
 	
 	int arr[];
 	int start, end;
 	int searchEle;
 	
-	public SearchTask(int arr[], int start, int end, int searchEle) {
+	public SearchTask123(int arr[], int start, int end, int searchEle) {
 		this.arr = arr;
 		this.start = start;
 		this.end = end;
@@ -20,8 +22,8 @@ class SearchTask extends RecursiveTask<Integer> {
 		int size = end - start + 1;
 		if (size > 3) {
 			int mid = (end + start) / 2;
-			SearchTask task1 = new SearchTask(arr, start, mid, searchEle);
-			SearchTask task2 = new SearchTask(arr, mid + 1, end, searchEle);
+			SearchTask123 task1 = new SearchTask123(arr, start, mid, searchEle);
+			SearchTask123 task2 = new SearchTask123(arr, mid + 1, end, searchEle);
 			task1.fork();
 			task2.fork();
 			int result = task1.join() + task2.join();
@@ -43,7 +45,7 @@ class SearchTask extends RecursiveTask<Integer> {
 	
 }
 
-public class Main {
+class Main103 {
 
 	public static void main(String[] args) {
 		int arr[] = {6, 2, 6, 4, 5, 6, 7, 8, 6, 10, 11, 6};
@@ -52,7 +54,7 @@ public class Main {
 		int end = arr.length - 1;
 		
 		ForkJoinPool pool = ForkJoinPool.commonPool();
-		SearchTask task = new SearchTask(arr, start, end, searchEle);
+		SearchTask123 task = new SearchTask123(arr, start, end, searchEle);
 		int result = pool.invoke(task);
 		
 		System.out.printf("%d found %d times", searchEle, result);

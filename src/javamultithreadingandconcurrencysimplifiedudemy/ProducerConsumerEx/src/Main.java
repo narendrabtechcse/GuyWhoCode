@@ -1,4 +1,4 @@
-// Producer and Consumer problem
+package javamultithreadingandconcurrencysimplifiedudemy.ProducerConsumerEx.src;// Producer and Consumer problem
 //    producer --> messageQueue --> consumer.
 
 import java.util.ArrayList;

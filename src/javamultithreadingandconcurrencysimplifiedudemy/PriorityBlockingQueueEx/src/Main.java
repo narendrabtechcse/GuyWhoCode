@@ -1,3 +1,5 @@
+package javamultithreadingandconcurrencysimplifiedudemy.PriorityBlockingQueueEx.src;
+
 import java.util.Comparator;
 import java.util.concurrent.PriorityBlockingQueue;
 
@@ -28,7 +30,7 @@ class StudentComparator implements Comparator<Student> {
 	
 }
 
-public class Main {
+class Main104 {
 
 	public static void main(String[] args) {
 		PriorityBlockingQueue<Integer> queue = new PriorityBlockingQueue<Integer>();
