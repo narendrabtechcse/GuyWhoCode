@@ -39,7 +39,7 @@ public class ReverseLL {
         while(head!=null){
             curr=head.next;
             head.next = prev;
-            prev=head;
+            prev = head;
             head = curr;
         }
         return prev;
