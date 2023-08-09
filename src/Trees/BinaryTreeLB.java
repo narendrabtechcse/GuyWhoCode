@@ -12,7 +12,6 @@ public class BinaryTreeLB {
         this.root = null;
     }
 
-
     //preorder Traversal of binary tree
     public void inOrderTraversal(BinaryNodeLB node) {
         if (node == null)
@@ -217,11 +216,6 @@ public class BinaryTreeLB {
 
             result.add(list);
         }
-
         return result;
-
-
     }
-
-
 }
