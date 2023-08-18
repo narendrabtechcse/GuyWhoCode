@@ -143,7 +143,7 @@ public class SinglyLinkedList {
 
 }
 
-class Main {
+class Main3 {
     public static void main(String[] args) {
         SinglyLinkedList sLL = new SinglyLinkedList();
         sLL.createSinglyLinkedList(5);
