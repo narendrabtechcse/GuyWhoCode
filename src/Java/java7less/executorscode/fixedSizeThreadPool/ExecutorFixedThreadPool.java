@@ -16,8 +16,5 @@ public class ExecutorFixedThreadPool {
         }
         System.out.println("Maximum threads inside pool " + executor.getMaximumPoolSize());
         executor.shutdown();
-
     }
-
-
 }

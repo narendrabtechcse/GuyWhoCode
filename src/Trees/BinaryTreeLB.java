@@ -142,7 +142,6 @@ public class BinaryTreeLB {
         if (root == null) {
             root = nodeLB;
             System.out.print("Inserted New node into the root of the tree !!");
-            return;
         } else {
             Queue<BinaryNodeLB> queue = new LinkedList<>();
             queue.add(root);
@@ -186,8 +185,6 @@ public class BinaryTreeLB {
 
         while(!queue.isEmpty())
         {
-            double sum = 0;
-
             level++;
 
             int qSize = queue.size();

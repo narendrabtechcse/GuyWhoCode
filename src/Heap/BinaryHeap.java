@@ -24,7 +24,6 @@ public class BinaryHeap {
             return null;
         }
         return arr[1];
-
     }
 
     public int sizeOfBP() {
@@ -58,7 +57,6 @@ public class BinaryHeap {
             }
         }
         heapifyBottomToTop(parent, heapType);
-
     }
 
     public void insert(int value, String typeHeap) {

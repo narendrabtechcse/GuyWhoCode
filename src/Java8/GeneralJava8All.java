@@ -21,10 +21,10 @@ public class GeneralJava8All {
         //Given an integer array nums, return true if any value appears at least twice in the array,
         // and return false if every element is distinct.
         Set<Integer> set = new HashSet<>(list1);
-        if(set.size() == list1.size()) {
-           System.out.println("false");
-        }else
-        System.out.println("true");
+        if (set.size() == list1.size()) {
+            System.out.println("false");
+        } else
+            System.out.println("true");
 
 
         //How will you get the current date and time using Java 8 Date and Time API?
@@ -48,20 +48,11 @@ public class GeneralJava8All {
 
         // Java 8 program to perform cube on list elements and filter numbers greater than 50.
 
-        list1.stream().map(i->i*i*i).filter(j->j>50).forEach(System.out::println);
+        list1.stream().map(i -> i * i * i).filter(j -> j > 50).forEach(System.out::println);
 
         //How to use map to convert object into Uppercase in Java 8?
         List<String> upperCaseList3 = list3.stream().map(String::toUpperCase).collect(Collectors.toList());
         System.out.println(upperCaseList3);
-
-
-
-
-
-
-
     }
-
-
-    }
+}
 
