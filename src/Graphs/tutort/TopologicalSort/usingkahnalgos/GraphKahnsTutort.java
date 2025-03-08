@@ -1,4 +1,4 @@
-package TopologicalSort.usingkahnalgos;
+package Graphs.tutort.TopologicalSort.usingkahnalgos;
 
 import java.util.*;
 

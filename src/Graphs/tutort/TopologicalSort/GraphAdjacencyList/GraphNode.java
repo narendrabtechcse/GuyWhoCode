@@ -1,4 +1,4 @@
-package TopologicalSort.GraphAdjacencyList;
+package Graphs.tutort.TopologicalSort.GraphAdjacencyList;
 
 import java.util.ArrayList;
 

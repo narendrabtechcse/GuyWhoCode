@@ -1,6 +1,4 @@
-package TopologicalSort.usingkahnalgos;
-
-import java.util.List;
+package Graphs.tutort.TopologicalSort.usingkahnalgos;
 
 public class TopologicalKahnAlgo {
     static int vertexCount = 6;

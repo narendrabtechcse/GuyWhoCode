@@ -9,8 +9,7 @@ public class GraphList {
 
     ArrayList<GraphNode> nodeList = new ArrayList<>();
 
-    GraphList(ArrayList<GraphNode> nodes)
-    {
+    GraphList(ArrayList<GraphNode> nodes) {
         this.nodeList = nodes;
     }
 
@@ -20,9 +19,9 @@ public class GraphList {
         StringBuilder s = new StringBuilder();
         for (int i = 0; i < nodeList.size(); i++) {
             s.append(nodeList.get(i).name + ": ");
-            for (int j =0; j < nodeList.get(i).neighbours.size(); j++) {
-                if (j == nodeList.get(i).neighbours.size()-1 ) {
-                    s.append((nodeList.get(i).neighbours.get(j).name) );
+            for (int j = 0; j < nodeList.get(i).neighbours.size(); j++) {
+                if (j == nodeList.get(i).neighbours.size() - 1) {
+                    s.append((nodeList.get(i).neighbours.get(j).name));
                 } else {
                     s.append((nodeList.get(i).neighbours.get(j).name) + " -> ");
                 }
@@ -41,8 +40,7 @@ public class GraphList {
         second.neighbours.add(first);
     }
 
-    public void bfsTraversal(GraphNode startNode)
-    {
+    public void bfsTraversal(GraphNode startNode) {
         List<GraphNode> q = new LinkedList<>();
 
         System.out.println();
@@ -51,17 +49,14 @@ public class GraphList {
         q.add(startNode);
         startNode.isVisited = true;
 
-        while(!q.isEmpty())
-        {
-            GraphNode currentNode =  q.remove(0);
+        while (!q.isEmpty()) {
+            GraphNode currentNode = q.remove(0);
             currentNode.isVisited = true;
 
             System.out.print(currentNode.name + " ");
 
-            for(GraphNode exec_node : currentNode.neighbours)
-            {
-                if(!exec_node.isVisited)
-                {
+            for (GraphNode exec_node : currentNode.neighbours) {
+                if (!exec_node.isVisited) {
                     q.add(exec_node);
                     exec_node.isVisited = true;
                 }
@@ -74,8 +69,8 @@ public class GraphList {
         System.out.println("DFS Traversal of the tree is : ");
 
         for (GraphNode node : nodeList) {
-            if(!node.isVisited)
-            dfsTraversal(node);
+            if (!node.isVisited)
+                dfsTraversal(node);
         }
 
     }
@@ -86,17 +81,14 @@ public class GraphList {
         stack.push(node);
         node.isVisited = true;
 
-        while(!stack.isEmpty())
-        {
+        while (!stack.isEmpty()) {
             GraphNode currentNode = stack.pop();
             currentNode.isVisited = true;
 
             System.out.print(currentNode.name + " ");
 
-            for(GraphNode node_exec : currentNode.neighbours)
-            {
-                if(!node_exec.isVisited)
-                {
+            for (GraphNode node_exec : currentNode.neighbours) {
+                if (!node_exec.isVisited) {
                     stack.push(node_exec);
                     node_exec.isVisited = true;
                 }
@@ -107,10 +99,9 @@ public class GraphList {
 
     }
 
-//printing the path in the graph
-    public static void pathPrint(GraphNode node)
-    {
-        if(node.parent != null){
+    //printing the path in the graph
+    public static void pathPrint(GraphNode node) {
+        if (node.parent != null) {
             pathPrint(node.parent);
         }
 
@@ -118,37 +109,26 @@ public class GraphList {
     }
 
 
-    public void BFSForSSSPP(GraphNode node)
-    {
+    public void BFSForSSSPP(GraphNode node) {
         LinkedList<GraphNode> queue = new LinkedList<>();
         queue.add(node);
 
-        while(!queue.isEmpty())
-        {
+        while (!queue.isEmpty()) {
             GraphNode currentNode = queue.remove();
 
             currentNode.isVisited = true;
 
-            System.out.println("Printting path for node "+currentNode.name + ": ");
+            System.out.println("Printting path for node " + currentNode.name + ": ");
 
             pathPrint(currentNode);
             System.out.println();
-            for(GraphNode neighbour : currentNode.neighbours){
-                if(!neighbour.isVisited)
-                {
+            for (GraphNode neighbour : currentNode.neighbours) {
+                if (!neighbour.isVisited) {
                     queue.add(neighbour);
                     neighbour.isVisited = true;
                     neighbour.parent = currentNode;
                 }
             }
-
         }
-
     }
-
-
-
-
-
-
 }

@@ -3,7 +3,6 @@ package Queue;
 class QArrayBasedImpl
 {
     int front,rear;
-    int size;
     int capacity;
     int[] queue;
 

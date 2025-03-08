@@ -1,4 +1,4 @@
-package TopologicalSort.GraphAdjacencyMatrix;
+package Graphs.tutort.TopologicalSort.GraphAdjacencyMatrix;
 
 public class GraphNode {
   public String name;
