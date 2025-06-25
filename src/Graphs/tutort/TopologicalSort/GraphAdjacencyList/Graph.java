@@ -115,9 +115,4 @@ public class Graph {
      System.out.print(stack.pop().name + " ");
    }
  }
-	
-
-
-
-
 }

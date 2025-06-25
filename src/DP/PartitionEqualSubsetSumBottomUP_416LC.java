@@ -64,8 +64,6 @@ public class PartitionEqualSubsetSumBottomUP_416LC {
                 dp[i][sum]=false;
 
             for (int j = 1; j <= sum; j++) {
-
-
                 if (nums[i - 1] <= j) {
                      dp[i][j] = dp[i - 1][ j - nums[i - 1]] || dp[i-1][ j];
                 } else {
