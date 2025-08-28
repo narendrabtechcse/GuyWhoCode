@@ -22,3 +22,40 @@ public class HouseRobberTabulisation {
         return dp[n];
     }
 }
+
+/*
+Memoisation way
+
+
+
+class Solution {
+    public int rob(int[] nums) {
+
+        int n = nums.length;
+        int[] memo = new int[n];
+
+        Arrays.fill(memo,-1);
+
+        return solve(nums,memo,0);
+
+    }
+
+    public int solve(int[] nums, int[] memo , int i)
+    {
+        if(i>=nums.length)
+        return 0;
+        if(memo[i]>-1)
+        return memo[i];
+
+        int ans=Math.max(solve(nums,memo,i+1),solve(nums,memo,i+2)+nums[i]);
+
+        memo[i] = ans;
+        return ans;
+
+
+    }
+}
+
+
+
+ */

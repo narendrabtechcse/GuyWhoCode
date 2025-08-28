@@ -87,13 +87,11 @@ class NQueen {
 
     private List<String> construct(char[][] board)
     {
-        List answer = new ArrayList<>();
+        List<String> answer = new ArrayList<>();
 
-        for(int i=0;i<board.length;i++)
-        {
-            answer.add(new String(board[i]));
+        for (char[] chars : board) {
+            answer.add(new String(chars));
         }
-
         return answer;
     }
 

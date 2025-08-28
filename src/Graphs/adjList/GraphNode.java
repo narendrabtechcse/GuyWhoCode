@@ -16,5 +16,4 @@ public class GraphNode {
         this.index = index;
     }
 
-
 }

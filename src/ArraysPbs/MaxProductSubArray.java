@@ -28,7 +28,7 @@ The product of any subarray of nums is guaranteed to fit in a 32-bit integer.
 
 public class MaxProductSubArray {
     public static void main(String[] args) {
-        System.out.println(maxProduct(new int[]{2,3,-2,4}));
+        System.out.println(maxProduct(new int[]{2, 3, -2, 4}));
     }
 
     public static int maxProduct(int[] nums) {
@@ -36,24 +36,18 @@ public class MaxProductSubArray {
         int n = nums.length;
 
         for (int i = 1; i < n; i++) {
-
             // Swapping min and max
-            if (nums[i] < 0){
+            if (nums[i] < 0) {
                 int temp = max;
                 max = min;
                 min = temp;
             }
 
-
-
             max = Math.max(nums[i], max * nums[i]);
             min = Math.min(nums[i], min * nums[i]);
 
-
             ans = Math.max(ans, max);
         }
-
         return ans;
-
     }
 }
